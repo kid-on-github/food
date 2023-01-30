@@ -1,4 +1,4 @@
-import { iCookingUnit, iRecipes } from './constants.ts'
+import { iCookingUnit, iRecipes } from './constants'
 
 export const recipes: iRecipes = {
 	// me
