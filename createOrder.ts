@@ -9,16 +9,14 @@ const reduceIngredients = function reduceIngredients(recipes: iRecipes): iIngred
         Object.keys(recipes[r]).forEach(i => {
             if (ingredientsToOrder.hasOwnProperty(i)) {
                 ingredientsToOrder[i].quantity += recipes[r][i].quantity;
+                // TODO: check for same unit
             }
             else {
-                ingredientsToOrder[i] = {
-                    quantity: recipes[r][i].quantity,
-                    unit: recipes[r][i].unit,
-                }
+                ingredientsToOrder[i] =recipes[r][i]; 
             }
         })
     })
     return ingredientsToOrder;
 }
 
-console.log(reduceIngredients(recipes))
+export default reduceIngredients;
